@@ -7,9 +7,9 @@
 import os
 import subprocess
 
-server = '10.10.10.142'
-tmpres = os.popen('curl -i -u admin:admin@142 http://10.10.10.142:15672/api/vhosts').readlines()
+#访问服务器状态
+server = '10.10.10.144'
+tmpres = os.popen('curl -i -u admin:admin@144 http://10.10.10.144:15672/api/nodes').readlines()
 print(len(tmpres))
-print(tmpres)
-
-print("ok..")
+for x in tmpres:
+    print(x)
